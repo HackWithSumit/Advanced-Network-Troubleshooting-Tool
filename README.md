@@ -1,71 +1,134 @@
-# Advanced-Network-Troubleshooting-Tool
-Advance networks troubleshoot tool
-
 # Advanced Network Troubleshooting Tool
 
-**Version:** 2.0  
-**Designed for:** Cybersertex  
-**Developed by:** Sumit Ghosh  
-**Contact:** cybersertex@outlook.com | **Phone:** +91 7076501101  
+## Overview
+A comprehensive GUI-based network troubleshooting tool designed for Windows systems. This tool provides an intuitive interface for performing various network diagnostic and repair operations.
 
-<img width="1561" height="1357" alt="image" src="https://github.com/user-attachments/assets/8f73b242-e037-49dc-9415-aeddf04280c4" />
+## Developer Information
+- **Designed for:** Cybersertex
+- **Developed by:** Sumit Ghosh
+- **Contact:** cybersertex@outlook.com
+- **Phone:** 7076501101
+- **Version:** 2.0
 
+## Features
 
----
+### Basic Network Tests
+- **Ping Test** - Test connectivity to remote hosts
+- **Trace Route** - Trace the path packets take to a destination
+- **DNS Lookup** - Resolve domain names to IP addresses
+- **Port Scanner** - Test connectivity to specific ports
+- **Connection Test** - Detailed network connection analysis
 
-## 📌 Overview
-The **Advanced Network Troubleshooting Tool** is a Windows-based GUI utility that simplifies network diagnostics and troubleshooting.  
-It integrates multiple command-line networking tools into a single, user-friendly interface.
+### Network Configuration Tools
+- **IP Configuration** - View detailed IP settings
+- **Network Statistics** - Display active connections and ports
+- **Route Table** - View system routing table
+- **ARP Table** - Display Address Resolution Protocol table
+- **WiFi Profiles** - List saved wireless network profiles
 
----
+### Network Repair Tools
+- **Flush DNS** - Clear DNS resolver cache
+- **Renew IP** - Release and renew IP address
+- **Reset Winsock** - Reset Windows Sockets catalog
+- **Reset TCP/IP** - Reset TCP/IP stack
+- **Full Reset** - Complete network stack reset
 
-## 🚀 Features
+### Advanced Diagnostic Tools
+- **Firewall Status** - Check Windows Firewall configuration
+- **Network Services** - View network-related service status
+- **Network Adapters** - Display network adapter information
+- **Bandwidth Monitor** - Monitor network interface usage
+- **System Information** - Display system configuration details
 
-- **Ping Test** – Check connectivity to any host.  
-- **Trace Route** – Identify the path packets take to reach a host.  
-- **DNS Lookup** – Resolve domain names to IP addresses.  
-- **Port Scanner** – Scan for open ports on a target system.  
-- **Connection Test** – Test active network connections.  
-- **IP Config** – View detailed network adapter configuration.  
-- **Network Stats** – Monitor active network statistics.  
-- **Route Table** – Display and manage routing table entries.  
-- **ARP Table** – View and manage the ARP cache.  
-- **WiFi Profiles** – View saved Wi-Fi profiles and passwords.  
-- **Flush DNS** – Clear the DNS resolver cache.  
-- **Renew IP** – Request a new IP address from the DHCP server.  
-- **Reset Winsock** – Reset the Windows Sockets API.  
-- **Reset TCP/IP** – Restore TCP/IP stack to default state.  
-- **Full Reset** – Performs all resets and requires a restart.  
-- **Firewall Status** – View the current firewall configuration.  
-- **Network Services** – Manage networking-related services.  
-- **Network Adapters** – View and manage installed network adapters.  
-- **Bandwidth Monitor** – Track real-time network usage.  
-- **System Info** – View system information.  
+## System Requirements
+- Windows 7/8/10/11
+- PowerShell 3.0 or higher
+- Administrative privileges (for some operations)
+- .NET Framework 3.5 or higher
 
----
+## Installation
+1. Download both files:
+   - `NetworkTroubleshootTool.bat`
+   - `NetworkTroubleshootTool.ps1`
+2. Place both files in the same directory
+3. Double-click `NetworkTroubleshootTool.bat` to launch
 
-## 📖 Instructions
+## Usage Instructions
+1. **Launch the Tool:** Run `NetworkTroubleshootTool.bat`
+2. **Select Operation:** Click any button to run the corresponding diagnostic tool
+3. **View Results:** Results appear in a separate window with detailed output
+4. **Administrator Privileges:** Some operations may prompt for elevated permissions
+5. **Warning Dialogs:** Potentially disruptive operations will show confirmation dialogs
 
-1. Click any button to run the corresponding network diagnostic tool.  
-2. Results will appear in a **new window** with detailed output.  
-3. Some operations may require **administrator privileges**.  
-4. Warning dialogs will appear for potentially disruptive operations.  
-5. Use **Full Reset** only as a last resort (requires system restart).  
-6. For technical support, contact: **cybersertex@outlook.com**  
+## Tool Categories
 
----
+### Row 1: Basic Network Tests
+| Tool | Description | Input Required |
+|------|-------------|----------------|
+| Ping Test | Tests connectivity to a host | IP address or hostname |
+| Trace Route | Shows path to destination | IP address or hostname |
+| DNS Lookup | Resolves domain names | Domain name |
+| Port Scanner | Tests specific port connectivity | IP:Port format |
+| Connection Test | Detailed connectivity analysis | None (uses 8.8.8.8) |
 
-## 🛠 Requirements
-- Windows OS  
-- Administrator privileges for certain operations  
+### Row 2: Network Configuration
+| Tool | Description | Admin Required |
+|------|-------------|----------------|
+| IP Config | Shows network configuration | No |
+| Network Stats | Lists active connections | No |
+| Route Table | Displays routing information | No |
+| ARP Table | Shows MAC address mappings | No |
+| WiFi Profiles | Lists saved WiFi networks | No |
 
----
+### Row 3: Network Repair Tools
+| Tool | Description | Admin Required | Restart Required |
+|------|-------------|----------------|------------------|
+| Flush DNS | Clears DNS cache | No | No |
+| Renew IP | Renews DHCP lease | Yes | No |
+| Reset Winsock | Resets socket catalog | Yes | Maybe |
+| Reset TCP/IP | Resets IP stack | Yes | Maybe |
+| Full Reset | Complete network reset | Yes | Yes |
 
-## 📜 License
-This tool is proprietary software developed by **Cybersertex**.  
-Unauthorized reproduction, distribution, or reverse engineering is prohibited.
+### Row 4: Advanced Tools
+| Tool | Description | Admin Required |
+|------|-------------|----------------|
+| Firewall Status | Shows firewall configuration | No |
+| Network Services | Lists network service status | No |
+| Network Adapters | Shows adapter information | No |
+| Bandwidth Monitor | Monitors network usage | No |
+| System Info | Displays system details | No |
 
----
+## Security Considerations
+- Some operations require administrative privileges
+- Network reset operations may temporarily disrupt connectivity
+- Use "Full Reset" only as a last resort
+- Always ensure you have alternative connectivity before performing resets
 
-**© 2025 Cybersertex – Developed by Sumit Ghosh**
+## Troubleshooting
+- **PowerShell not found:** Install PowerShell or update to a newer version
+- **Access denied errors:** Run as Administrator
+- **Script execution disabled:** The tool automatically sets execution policy
+- **GUI doesn't appear:** Check Windows Forms are installed (.NET Framework)
 
+## Support
+For technical support or feature requests:
+- **Email:** cybersertex@outlook.com
+- **Phone:** 7076501101
+
+## License
+This tool is designed for Cybersertex. All rights reserved.
+
+## Version History
+- **v2.0** - Advanced GUI with comprehensive network diagnostic tools
+- **v1.0** - Basic network troubleshooting functionality
+
+## Safety Notice
+⚠️ **WARNING:** Network reset operations can temporarily disrupt network connectivity. Use with caution, especially in production environments.
+
+## File Structure
+```
+NetworkTroubleshootingTool/
+├── NetworkTroubleshootTool.bat    # Launcher batch file
+├── NetworkTroubleshootTool.ps1    # Main PowerShell GUI script
+└── README.md                      # This documentation
+```
