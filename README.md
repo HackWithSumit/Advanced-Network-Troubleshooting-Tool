@@ -10,6 +10,12 @@ A comprehensive GUI-based network troubleshooting tool designed for Windows syst
 - **Phone:** 7076501101
 - **Version:** 2.0
 
+
+<img width="1561" height="1357" alt="image" src="https://github.com/user-attachments/assets/f52ea187-4007-4632-bf8b-6c6ef08f48ce" />
+
+
+
+
 ## Features
 
 ### Basic Network Tests
@@ -132,3 +138,4 @@ NetworkTroubleshootingTool/
 ├── NetworkTroubleshootTool.ps1    # Main PowerShell GUI script
 └── README.md                      # This documentation
 ```
+
